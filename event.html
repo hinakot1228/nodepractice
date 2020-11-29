@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="text1">文字色が変わるよ</p>
+
+    <!-- div内の先頭にpタグを追加する -->
+    <div id="box">
+        <p>Hello World</p>
+    </div> 
+    
+    <!-- div内の最後にpタグを追加する -->
+    <div id="box2"></div>
+
+    <!-- div内にaタグを追加する -->
+    <div id="box3"></div>
+
+    <!-- div内にimgタグを追加する -->
+    <div id="box4"></div>
+
+    <!-- div内にvideoタグを追加する -->
+    <div id="box5"></div>
+
+    <!-- 要素の削除1(div内からpタグを削除する) -->
+    <div id="box6">
+        <p id="orange6">オレンジ</p>
+        <p id="apple6">リンゴ</p>
+        <p id="banana6">バナナ</p>
+    </div>
+    <!-- 要素の削除2(div内の子要素を削除する) -->
+    <div id="box7">
+        <p id="orange7">オレンジ</p>
+        <p id="apple7">リンゴ</p>
+        <p id="banana7">バナナ</p>
+    </div>
+
+    <script>
+        let text1 = document.getElementById('text1');
+        text1.addEventListener('click' , function(){
+            this.style.color = 'pink';
+        }, false);
+
+        // div内の先頭にpタグを追加する
+        let p = document.createElement('p');
+        p.textContent = 'Hello World2';
+        let box = document.getElementById('box');
+        box.insertBefore(p, box.firstChild);
+
+        // div内の最後にpタグを追加する
+        let p2 = document.createElement('p');
+        p2.textContent = 'Hello World:)';
+        let box2 = document.getElementById('box2');
+        box2.appendChild(p2);
+
+        // div内にaタグを追加する
+        let a = document.createElement('a');
+        a.textContent = 'こんにちは';
+        let box3 = document.getElementById('box3');
+        box3.appendChild(a);
+
+        // div内にimgタグを追加する
+        let img = document.createElement('img');
+        img.src = 'https://dummyimage.com/200x100/e314e3/fff&text=TEST';
+        let box4 = document.getElementById('box4');
+        box4.appendChild(img);
+
+        // div内にvideoタグを追加する
+        let video = document.createElement('video');
+        video.src = '#';
+        video.autoplay = true;
+        let box5 = document.getElementById('box5');
+        box5.appendChild(video);
+
+        // 要素の削除1(div内からpタグを削除する)
+        let orange6 = document.getElementById('orange6');
+        orange6.remove();
+
+        // 要素の削除2(div内の子要素を削除する) 
+        let box7 = document.getElementById('box7');
+        box7.removeChild(orange7);
+    </script>
+</body>
+</html>

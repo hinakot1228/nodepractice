@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- IDから取得 -->
+    <div class="id">
+        <!-- <ul>
+            <li id="red">赤</li>
+            <li id="blue">ブルー</li>
+            <li id="green">グリーン</li>
+        </ul> -->
+    </div>
+
+    <!-- classから取得 -->
+    <div class="class">
+        <!-- <ul>
+            <li class="red">赤</li>
+            <li class="blue">ブルー</li>
+            <li class="green">グリーン１</li>
+            <li class="green">グリーン２</li>
+        </ul> -->
+    </div>
+
+    <!-- 要素名から取得 -->
+    <div class="element">
+        <!-- <ul>
+            <li id="red">赤</li>
+            <li id="blue">ブルー</li>
+            <li id="green">グリーン</li>
+        </ul> -->
+    </div>
+
+    <!-- nameから取得 -->
+    <div class="name">
+        <!-- <form action="" id="form">
+            <div>
+                <label for="">名前</label>
+                <input type="text" name="name" value="山田太郎">
+            </div>
+            <div>
+                <label for="">メールアドレス</label>
+                <input type="text" name="email" value="yamada@example.com">
+            </div>
+            <button type="button" id="submit">送信</button>
+        </form> -->
+    </div>
+
+    <!-- CSSセレクタから取得（1つだけ） -->
+    <div class="cssselector1">
+        <!-- <ul id="box">
+            <li class="color">赤</li>
+            <li class="color">ブルー</li>
+            <li class="color">グリーン</li>
+        </ul> -->
+    </div>
+
+    <!-- CSSセレクタから取得（マッチする要素すべて） -->
+    <div id="cssselector2">
+        <!-- <ul id="box">
+            <li class="color">赤</li>
+            <li class="color">ブルー</li>
+            <li class="color">グリーン</li>
+        </ul> -->
+    </div>
+
+    <!-- 親ノードを取得 -->
+    <div id="oyanode">
+        <!-- <ul id="box">
+            <li id="red">赤</li>
+            <li id="blue">ブルー</li>
+            <li id="green">グリーン</li>
+        </ul> -->
+    </div>
+
+    <!-- 子要素を取得 -->
+    <div class="koyouso">
+        <ul id="box">
+            <li class="color">赤</li>
+            <li class="color">ブルー</li>
+            <li class="color">グリーン</li>
+        </ul>
+    </div>
+
+    <script>
+        // IDから取得
+        // let bule = document.getElementById('blue');
+        // console.log(blue);
+
+        // classから取得
+        // let green = document.getElementsByClassName('green');
+        // console.log(green.item(0).textContent);
+        // console.log(green.item(1).textContent);
+
+        // 要素名から取得
+        // let liArray = document.getElementsByTagName('li');
+        // for(let i = 0; i < liArray.length; i++){
+        //     console.log(liArray.item(i).textContent);
+        // }
+
+        // nameから取得
+        // let name = document.getElementsByName('name');
+        // console.log(name[0].value);
+
+        // let email = document.getElementsByName('email');
+        // console.log(email[0].value);
+
+        // CSSセレクタから取得（1つだけ）
+        // let color = document.querySelector('#box .color');
+        // console.log(color.textContent);
+
+        // CSSセレクタから取得（マッチする要素すべて
+        // let colors = document.querySelectorAll('#box" .color');
+        // for(color of colors){
+        //     console.log(color);
+        // }
+
+        // 親ノードを取得
+        // let red = document.getElementById("red");
+        // let ul = red.parentElement;
+        // console.log(ul);
+
+        // ul.style.backgroundColor = 'pink';
+
+        // 子要素を取得
+        let box = document.getElementById('box');
+        let liList = box.children;
+
+        for(li of liList){
+            console.log(li.textContent)
+        }
+
+    </script>
+</body>
+</html>
